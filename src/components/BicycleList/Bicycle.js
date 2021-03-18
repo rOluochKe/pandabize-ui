@@ -1,31 +1,21 @@
-import React from "react";
+import React from 'react';
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import DeleteIcon from "@material-ui/icons/Delete";
-import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    height: "auto",
-    margin: "1em",
-    padding: "2em",
+    maxWidth: 900,
   },
-  divider: {
-    width: "25%",
-    margin: "1em",
-  },
-  paper: {
-    margin: "1em",
-    padding: "2em",
-    textAlign: "justify",
-  },
-  heading: {
-    textAlign: "center",
-  },
-  todo_body: {
-    padding: "1em",
+  media: {
+    height: 400,
   },
 });
 
@@ -39,45 +29,46 @@ export default function Bicycle(props) {
   return (
     <Grid container spacing={0}>
       <Grid bike xs={1}></Grid>
-      <Grid bike xs={10}>
-        <Paper elevation={10} className={classes.paper}>
-          <Typography variant="h4" className={classes.heading}>
-            {props.bike.full_name}
-          </Typography>
-          <hr className={classes.divider} style={{ marginLeft: "37.5%" }} />
-          <div className={classes.todo_budy}>
-            <Typography variant="body1">{props.bike.description}</Typography>
-          </div>
-          <Typography variant="h4" className={classes.heading}>
-            <strong>Wheel Size: </strong>
-            {props.bike.wheel_size}
-          </Typography>
-          <Typography variant="h4" className={classes.heading}>
-            <strong>Rim Color: </strong>
-            {props.bike.rim_color}
-          </Typography>
-          <Typography variant="h4" className={classes.heading}>
-            <strong>Saddle Color: </strong>
-            {props.bike.saddle_color}
-          </Typography>
-          <Typography variant="h4" className={classes.heading}>
-            <strong>Price: </strong>
-            {props.bike.price}
-          </Typography>
-          <Typography variant="h4" className={classes.heading}>
-            {props.bike.image_url}
-          </Typography>
-          <hr className={classes.divider} />
-          <Button
-            variant="contained"
-            color="secondary"
-            size="small"
-            startIcon={<DeleteIcon />}
-            onClick={handleDelete}
-          >
-            Delete Bicycle
-          </Button>
-        </Paper>
+        <Grid bike xs={8} className="main-card">
+          <Card className={classes.root} id="card-margin">
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={props.bike.image_url}
+                title={props.bike.full_name}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {props.bike.full_name}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {props.bike.description}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Wheel Size: <em>{props.bike.wheel_size}</em>
+              </Button>
+              <Button size="small" color="primary">
+                Rim Color: <em>{props.bike.rim_color}</em>
+              </Button>
+              <Button size="small" color="primary">
+                Saddle Color: <em>{props.bike.saddle_color}</em>
+              </Button>
+            </CardActions>
+            <CardActions>
+              <Button
+                variant="contained"
+                color="secondary"
+                size="small"
+                startIcon={<DeleteIcon />}
+                onClick={handleDelete}
+              >
+                Delete Bicycle
+              </Button>
+            </CardActions>
+          </Card>
       </Grid>
     </Grid>
   );

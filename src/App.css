@@ -3,3 +3,36 @@
 * {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+.create-space {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.create-space-form {
+  margin-top: 20px;
+}
+
+#card-margin {
+  margin-top: 20px;
+}
+
+.main-card {
+  margin: 0 auto;
+}
+
+.italic-options {
+  margin-left: 5px;
+}
+
+em {
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.MuiCardMedia-root {
+  width: 75%;
+  margin: 0 auto;
+}

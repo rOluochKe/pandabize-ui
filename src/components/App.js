@@ -15,8 +15,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Typography variant="h1" className={classes.app_title}>Pandabize Shop App</Typography>
-        <hr />
+        <Typography variant="h3" className={classes.app_title}>Pandabize Shop App</Typography>
         <BicycleList />
       </header>
     </div>

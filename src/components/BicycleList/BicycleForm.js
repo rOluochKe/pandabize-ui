@@ -3,7 +3,6 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
-
 class BicycleForm extends Component {
   constructor(props) {
     super(props);
@@ -120,14 +119,15 @@ class BicycleForm extends Component {
     return (
       <Grid container>
         <Grid bike xs></Grid>
-        <Grid bike xs={10}>
+        <Grid bike xs={8}>
           <form
             onSubmit={this.handleSubmit}
             id="bicycle_form"
             autoComplete="off"
+            className="create-space-form"
           >
             <Grid container>
-              <Grid bike xs={12}>
+              <Grid bike xs={12} className="create-space">
                 <TextField
                   id="full_name_input"
                   label="Full Name"
@@ -139,7 +139,7 @@ class BicycleForm extends Component {
                   fullWidth
                 />
               </Grid>
-              <Grid bike xs={12}>
+              <Grid bike xs={12} className="create-space">
                 <TextareaAutosize
                   id="description_input"
                   label="Description"
@@ -153,7 +153,7 @@ class BicycleForm extends Component {
                   name="bicycle[description]"
                 ></TextareaAutosize>
               </Grid>
-              <Grid bike xs={12}>
+              <Grid bike xs={12} className="create-space">
                 <TextField
                   id="wheel_size_input"
                   label="Wheel Size"
@@ -165,7 +165,7 @@ class BicycleForm extends Component {
                   fullWidth
                 />
               </Grid>
-              <Grid bike xs={12}>
+              <Grid bike xs={12} className="create-space">
                 <TextField
                   id="rim_color_input"
                   label="Rim Color"
@@ -177,7 +177,7 @@ class BicycleForm extends Component {
                   fullWidth
                 />
               </Grid>
-              <Grid bike xs={12}>
+              <Grid bike xs={12} className="create-space">
                 <TextField
                   id="saddle_color_input"
                   label="Saddle Color"
@@ -189,7 +189,7 @@ class BicycleForm extends Component {
                   fullWidth
                 />
               </Grid>
-              <Grid bike xs={12}>
+              <Grid bike xs={12} className="create-space">
                 <TextField
                   id="price_input"
                   label="Price"
@@ -201,7 +201,7 @@ class BicycleForm extends Component {
                   fullWidth
                 />
               </Grid>
-              <Grid bike xs={12}>
+              <Grid bike xs={12} className="create-space">
                 <TextField
                   id="image_url_input"
                   label="Image URL"
@@ -213,7 +213,7 @@ class BicycleForm extends Component {
                   fullWidth
                 />
               </Grid>
-              <Grid bike xs={2}>
+              <Grid bike xs={2} className="create-space">
                 <Button
                   variant="contained"
                   color="primary"
