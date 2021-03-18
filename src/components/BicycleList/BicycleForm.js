@@ -153,6 +153,20 @@ class BicycleForm extends Component {
                   name="bicycle[description]"
                 ></TextareaAutosize>
               </Grid>
+
+              <Grid bike xs={12} className="create-space">
+                <TextField
+                  id="wheel_size_input"
+                  label="Wheel Size"
+                  variant="outlined"
+                  type="text"
+                  name="bicycle[wheel_size]"
+                  value={this.state.wheel_size}
+                  onChange={this.handleWheelSizeChange}
+                  fullWidth
+                />
+              </Grid>
+
               <Grid bike xs={12} className="create-space">
                 <TextField
                   id="wheel_size_input"
