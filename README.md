@@ -6,7 +6,7 @@
 
 ## Back End: Rails API
 > View in this [REPO](https://github.com/rOluochKe/pandabize)
-> [Live Demo]()
+> [Live Demo](https://naughty-shannon-943620.netlify.app/)
 
 ## Usage
 
