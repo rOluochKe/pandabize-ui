@@ -3,7 +3,7 @@ import BicycleForm from "./BicycleForm";
 import Bicycle from "./Bicycle";
 import Grid from "@material-ui/core/Grid";
 
-const api_url = `http://localhost:3001/api/v1/bicycles`;
+const api_url = `https://immense-tor-38293.herokuapp.com/api/v1/bicycles`;
 
 class BicycleList extends Component {
   constructor(props) {
